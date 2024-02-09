@@ -1,0 +1,14 @@
+<%= turbo_refreshes_with method: :morph, scroll: :preserve %>
+
+<div>Hello Turbo</div>
+
+<div class="p-10 border border-red-500">
+  <%= turbo_frame_tag "frame" do %>
+    Frame initial state
+    <%= link_to "Navigate", "/frame", class: "text-blue-400" %>
+  <% end %>
+</div>
+
+<div class="mt-10">
+  <%= button_to "Refresh!", "/post", class: "text-blue-400" %>
+</div>
